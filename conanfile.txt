@@ -6,6 +6,9 @@ boost/[>=1.84]
 [test_requires]
 gtest/[>=1.2.1]
 
+[options]
+fmt*:header_only = True
+
 [generators]
 CMakeDeps
 CMakeToolchain
