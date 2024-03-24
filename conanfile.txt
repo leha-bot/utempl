@@ -1,0 +1,11 @@
+# Simplest conanfile.txt for getting fmt and generating CMake scripts for find_package(fmt)
+[requires]
+fmt/[>=10.2.1]
+boost/[>=1.84]
+
+[test_requires]
+gtest/[>=1.2.1]
+
+[generators]
+CMakeDeps
+CMakeToolchain
