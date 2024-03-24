@@ -63,6 +63,10 @@ jobs:
     - name: Conan version
       run: echo "${{ steps.conan.outputs.version }}"
 
+    - name: Detect Conan profile
+      # Determine default profile with compiler
+      run: conan profile detect
+
     - name: Install dependencies via Conan
       # Store CMake config files and Conan toolchain into the _deps directory. It will be used later for build.
       run: conan install . -of ${{ steps.strings.outputs.deps-output-dir }} --build=missing
